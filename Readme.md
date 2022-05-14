@@ -1,21 +1,24 @@
-After forking this project in Github, run these commands:
-git clone https://github.com/<your-username>/IMDB-AUTOMATION.git
+## Run these commands:
 
-## cd into the cloned repo
-cd cypress-example-kitchensink
+git clone https://github.com/ribantech/imdb-automation.git
 
-## Install the node_modules
+cd into the cloned repo
+
+cd IMDB-AUTOMATION
+
 npm install
 
-## Launch the cypress test runner
 npm run cy:open
+
 or
+
 npx cypress run
 
-##Test Cases
+## Test Cases
+
 IMDB test cases.xlsx - Contains all the test cases with detailed steps
 
-##Smoke Test cases
+## Smoke Test cases
 
 TC1 - This test case is to validate if IMDB Top 250 page loads with all the page components
 
