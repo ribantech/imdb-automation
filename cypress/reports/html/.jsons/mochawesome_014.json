@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-14T18:47:06.764Z",
+    "end": "2022-05-14T18:47:19.098Z",
+    "duration": 12334,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7e7265a9-6972-465c-8fc8-005f7e97deed",
+      "title": "",
+      "fullFile": "cypress/integration/specs/TC10_FooterValidation.ts",
+      "file": "cypress/integration/specs/TC10_FooterValidation.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "96020ee3-9164-4c4d-bf59-05ca080aa99b",
+          "title": "TC10 - IMDB Footer validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1. Navigate to IMDB home page",
+              "fullTitle": "TC10 - IMDB Footer validation 1. Navigate to IMDB home page",
+              "timedOut": null,
+              "duration": 9864,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "appUrl = envUrl + testdata.url;\ncy.visit(appUrl);\nhomePage = new HomePage_1.default();\nhomePage.getPageTitle().getTitle().should('have.text', testdata.title);",
+              "err": {},
+              "uuid": "2988710a-f896-4dda-a5b1-1a2b4c600193",
+              "parentUUID": "96020ee3-9164-4c4d-bf59-05ca080aa99b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Validate Footer Social section is displayed",
+              "fullTitle": "TC10 - IMDB Footer validation 2. Validate Footer Social section is displayed",
+              "timedOut": null,
+              "duration": 446,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getFooter().getFooterSocialSection().should('be.visible');",
+              "err": {},
+              "uuid": "ffce85d7-b9ef-4f83-9b9e-2c44145304a6",
+              "parentUUID": "96020ee3-9164-4c4d-bf59-05ca080aa99b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3. Validate Link Row1 is displayed",
+              "fullTitle": "TC10 - IMDB Footer validation 3. Validate Link Row1 is displayed",
+              "timedOut": null,
+              "duration": 310,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getFooter().getFooterLinkRow1().should('be.visible');",
+              "err": {},
+              "uuid": "9c9930b4-fb8d-44ee-935b-a24f24299496",
+              "parentUUID": "96020ee3-9164-4c4d-bf59-05ca080aa99b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4. Validate Link Row2 is displayed",
+              "fullTitle": "TC10 - IMDB Footer validation 4. Validate Link Row2 is displayed",
+              "timedOut": null,
+              "duration": 295,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getFooter().getFooterLinkRow2().should('be.visible');",
+              "err": {},
+              "uuid": "8d2c56b4-83de-4cc1-8e9a-c3bb9cab7f38",
+              "parentUUID": "96020ee3-9164-4c4d-bf59-05ca080aa99b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "5. Validate Footer Logo is displayed",
+              "fullTitle": "TC10 - IMDB Footer validation 5. Validate Footer Logo is displayed",
+              "timedOut": null,
+              "duration": 272,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getFooter().getFooterLogo().should('be.visible');",
+              "err": {},
+              "uuid": "16555661-a942-41b6-9224-9b83bb7c91a0",
+              "parentUUID": "96020ee3-9164-4c4d-bf59-05ca080aa99b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "6. Validate Footer copyright is displayed",
+              "fullTitle": "TC10 - IMDB Footer validation 6. Validate Footer copyright is displayed",
+              "timedOut": null,
+              "duration": 286,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getFooter().getFooterCopyright().should('be.visible');",
+              "err": {},
+              "uuid": "2ebf5a7e-a387-4e2a-8429-59695739fd8b",
+              "parentUUID": "96020ee3-9164-4c4d-bf59-05ca080aa99b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2988710a-f896-4dda-a5b1-1a2b4c600193",
+            "ffce85d7-b9ef-4f83-9b9e-2c44145304a6",
+            "9c9930b4-fb8d-44ee-935b-a24f24299496",
+            "8d2c56b4-83de-4cc1-8e9a-c3bb9cab7f38",
+            "16555661-a942-41b6-9224-9b83bb7c91a0",
+            "2ebf5a7e-a387-4e2a-8429-59695739fd8b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11473,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

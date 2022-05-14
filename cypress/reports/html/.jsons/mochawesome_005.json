@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-14T14:03:23.066Z",
+    "end": "2022-05-14T14:03:35.116Z",
+    "duration": 12050,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8e19c8d1-5c0c-4b3d-8b11-245064b76b87",
+      "title": "",
+      "fullFile": "cypress/integration/specs/MovieSectionValidation.ts",
+      "file": "cypress/integration/specs/MovieSectionValidation.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "30211623-5842-411f-8339-bbd51fa1e841",
+          "title": "TC5 - IMDB Movie section validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1. Navigate to IMDB home page",
+              "fullTitle": "TC5 - IMDB Movie section validation 1. Navigate to IMDB home page",
+              "timedOut": null,
+              "duration": 11065,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "appUrl = envUrl + testdata.url;\ncy.visit(appUrl);\nhomePage = new HomePage_1.default();\nhomePage.getPageTitle().getTitle().should('have.text', testdata.title);",
+              "err": {},
+              "uuid": "a795b7a6-1939-4134-b580-81d3714f0ee0",
+              "parentUUID": "30211623-5842-411f-8339-bbd51fa1e841",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Validate if Movie table has 250 rows for each sorting dropdown values",
+              "fullTitle": "TC5 - IMDB Movie section validation 2. Validate if Movie table has 250 rows for each sorting dropdown values",
+              "timedOut": null,
+              "duration": 336,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var values = testdata.dropdownvalues;\nfor (var ele in testdata.dropdownvalues) {\n    homePage.getMovies().getMovieTableDropdown().select(testdata.dropdownvalues[ele]);\n    homePage.getMovies().getMovieTable().find('tr').should('have.length', 250);\n}\n/*\nvalues.forEach(element => {\n    homePage.getMovies().getMovieTableDropdown().select(element);\n    homePage.getMovies().getMovieTable().find('tr').should('have.length', 250);\n});\n*/",
+              "err": {},
+              "uuid": "e173cf8a-8a40-447f-9e33-fcda11fd3c87",
+              "parentUUID": "30211623-5842-411f-8339-bbd51fa1e841",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a795b7a6-1939-4134-b580-81d3714f0ee0",
+            "e173cf8a-8a40-447f-9e33-fcda11fd3c87"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11401,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

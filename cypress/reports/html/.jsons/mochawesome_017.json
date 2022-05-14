@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-14T18:48:20.030Z",
+    "end": "2022-05-14T18:48:38.254Z",
+    "duration": 18224,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "73108047-616b-46b8-b040-a16a156a2f7c",
+      "title": "",
+      "fullFile": "cypress/integration/specs/TC8_GenreValidation.ts",
+      "file": "cypress/integration/specs/TC8_GenreValidation.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fb88b2b4-af7d-4ab6-8fd7-ff05db9fd56c",
+          "title": "TC8 - Genre validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1. Navigate to IMDB home page",
+              "fullTitle": "TC8 - Genre validation 1. Navigate to IMDB home page",
+              "timedOut": null,
+              "duration": 10613,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "appUrl = envUrl + testdata.url;\ncy.visit(appUrl);\nhomePage.getPageTitle().getTitle().should('have.text', testdata.title);",
+              "err": {},
+              "uuid": "1b668ae5-34b5-4d3c-ad7c-67d0f5431dd7",
+              "parentUUID": "fb88b2b4-af7d-4ab6-8fd7-ff05db9fd56c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Click on Genre link",
+              "fullTitle": "TC8 - Genre validation 2. Click on Genre link",
+              "timedOut": null,
+              "duration": 6481,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getRightSidebar().getGenreLinkByName(testdata.genre).click();",
+              "err": {},
+              "uuid": "e310e844-44ac-49fc-9b01-dcf90d1e8e7a",
+              "parentUUID": "fb88b2b4-af7d-4ab6-8fd7-ff05db9fd56c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3. Validate Genre page title",
+              "fullTitle": "TC8 - Genre validation 3. Validate Genre page title",
+              "timedOut": null,
+              "duration": 294,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var title = testdata.genretitle;\ntitle = title.replace(\"PLACEHOLDER\", testdata.genre);\ngenrePage.getTitle().should('have.text', title);",
+              "err": {},
+              "uuid": "360f64c5-2eef-4e8d-aa8d-6fba78590133",
+              "parentUUID": "fb88b2b4-af7d-4ab6-8fd7-ff05db9fd56c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1b668ae5-34b5-4d3c-ad7c-67d0f5431dd7",
+            "e310e844-44ac-49fc-9b01-dcf90d1e8e7a",
+            "360f64c5-2eef-4e8d-aa8d-6fba78590133"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17388,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

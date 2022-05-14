@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-05-14T13:49:51.081Z",
+    "end": "2022-05-14T13:50:03.853Z",
+    "duration": 12772,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "18e9957f-692c-4675-a763-0871803ef48a",
+      "title": "",
+      "fullFile": "cypress/integration/specs/MovieSectionValidation.ts",
+      "file": "cypress/integration/specs/MovieSectionValidation.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9aef6f07-14f4-4003-9ef2-a7e268edbb40",
+          "title": "TC5 - IMDB Movie section validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1. Navigate to IMDB home page",
+              "fullTitle": "TC5 - IMDB Movie section validation 1. Navigate to IMDB home page",
+              "timedOut": null,
+              "duration": 11294,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "appUrl = envUrl + testdata.url;\ncy.visit(appUrl);\nhomePage = new HomePage_1.default();\nhomePage.getPageTitle().getTitle().should('have.text', testdata.title);",
+              "err": {},
+              "uuid": "4365d0c3-b263-4a9d-a02d-57bdf55f49f1",
+              "parentUUID": "9aef6f07-14f4-4003-9ef2-a7e268edbb40",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Validate if Movie table has 250 rows for each sorting dropdown values",
+              "fullTitle": "TC5 - IMDB Movie section validation 2. Validate if Movie table has 250 rows for each sorting dropdown values",
+              "timedOut": null,
+              "duration": 642,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(testdata.dropdownvalues);\nvar values = JSON.parse(testdata.dropdownvalues);\ncy.log(values);\nvalues.forEach(function (element) {\n    homePage.getMovies().getMovieTableDropdown().select(element);\n    homePage.getMovies().getMovieTable().find('tr').should('have.length', 250);\n});",
+              "err": {
+                "message": "SyntaxError: Unexpected token u in JSON at position 0",
+                "estack": "SyntaxError: Unexpected token u in JSON at position 0\n    at JSON.parse (<anonymous>)\n    at Context.eval (https://www.imdb.com/__cypress/tests?p=cypress/integration/specs/MovieSectionValidation.ts:124:27)",
+                "diff": null
+              },
+              "uuid": "44142555-46ca-4dcb-9049-c6c1fdd51bde",
+              "parentUUID": "9aef6f07-14f4-4003-9ef2-a7e268edbb40",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4365d0c3-b263-4a9d-a02d-57bdf55f49f1"
+          ],
+          "failures": [
+            "44142555-46ca-4dcb-9049-c6c1fdd51bde"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11936,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

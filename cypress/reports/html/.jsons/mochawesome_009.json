@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-05-14T14:36:24.824Z",
+    "end": "2022-05-14T14:36:38.162Z",
+    "duration": 13338,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f697c7ab-4541-4a27-8ce6-f9a40dbc07a0",
+      "title": "",
+      "fullFile": "cypress/integration/specs/MovieSectionValidation.ts",
+      "file": "cypress/integration/specs/MovieSectionValidation.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "76c757bd-94d4-49b2-8e94-c616df8cfbd7",
+          "title": "TC5 - IMDB Movie section validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1. Navigate to IMDB home page",
+              "fullTitle": "TC5 - IMDB Movie section validation 1. Navigate to IMDB home page",
+              "timedOut": null,
+              "duration": 11781,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "appUrl = envUrl + testdata.url;\ncy.visit(appUrl);\nhomePage = new HomePage_1.default();\nhomePage.getPageTitle().getTitle().should('have.text', testdata.title);",
+              "err": {},
+              "uuid": "85d71c6b-4170-456f-8944-f8eaaa398219",
+              "parentUUID": "76c757bd-94d4-49b2-8e94-c616df8cfbd7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Validate if Movie table has 250 rows for each sorting dropdown values",
+              "fullTitle": "TC5 - IMDB Movie section validation 2. Validate if Movie table has 250 rows for each sorting dropdown values",
+              "timedOut": null,
+              "duration": 645,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var values = testdata.dropdownvalues;\n/*\nfor (let ele in testdata.dropdownvalues) {\n    homePage.getMovies().getMovieTableDropdown().select(testdata.dropdownvalues[ele]);\n    homePage.getMovies().getMovieTable().find('tr').should('have.length', 250);\n}\n*/\nvalues.forEach(function (element) {\n    homePage.getMovies().getMovieTableDropdown().select(testdata.dropdownvalues[ele]);\n    homePage.getMovies().getMovieTable().find('tbody tr').should('have.length', 250);\n});",
+              "err": {
+                "message": "ReferenceError: ele is not defined",
+                "estack": "ReferenceError: ele is not defined\n    at eval (https://www.imdb.com/__cypress/tests?p=cypress/integration/specs/MovieSectionValidation.ts:131:89)\n    at Context.eval (https://www.imdb.com/__cypress/tests?p=cypress/integration/specs/MovieSectionValidation.ts:130:16)",
+                "diff": null
+              },
+              "uuid": "198b8b0d-224c-486a-929f-c202e5f73331",
+              "parentUUID": "76c757bd-94d4-49b2-8e94-c616df8cfbd7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "85d71c6b-4170-456f-8944-f8eaaa398219"
+          ],
+          "failures": [
+            "198b8b0d-224c-486a-929f-c202e5f73331"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12426,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

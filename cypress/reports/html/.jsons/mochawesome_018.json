@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-14T18:48:45.631Z",
+    "end": "2022-05-14T19:00:59.892Z",
+    "duration": 734261,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ddc7b8ca-0b4a-4ef9-932c-83d96f5430bf",
+      "title": "",
+      "fullFile": "cypress/integration/specs/TC9_HeaderValidation.ts",
+      "file": "cypress/integration/specs/TC9_HeaderValidation.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "beddb0a2-2075-44ca-bc85-dbe3abff5846",
+          "title": "TC9 - IMDB Header validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1. Navigate to IMDB home page",
+              "fullTitle": "TC9 - IMDB Header validation 1. Navigate to IMDB home page",
+              "timedOut": null,
+              "duration": 724764,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "appUrl = envUrl + testdata.url;\ncy.visit(appUrl);\nhomePage = new HomePage_1.default();\nhomePage.getPageTitle().getTitle().should('have.text', testdata.title);",
+              "err": {},
+              "uuid": "861c4164-4c1f-4983-9279-8368dd467625",
+              "parentUUID": "beddb0a2-2075-44ca-bc85-dbe3abff5846",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Validate Menu option is displayed",
+              "fullTitle": "TC9 - IMDB Header validation 2. Validate Menu option is displayed",
+              "timedOut": null,
+              "duration": 3911,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getHeader().getMenuSection().should('be.visible');",
+              "err": {},
+              "uuid": "5103b356-4c33-448e-bdda-8510cbb96ee6",
+              "parentUUID": "beddb0a2-2075-44ca-bc85-dbe3abff5846",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3. Validate Search bar is displayed",
+              "fullTitle": "TC9 - IMDB Header validation 3. Validate Search bar is displayed",
+              "timedOut": null,
+              "duration": 909,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getHeader().getSearchBox().should('be.visible');",
+              "err": {},
+              "uuid": "6df5fe90-f87a-433f-8e5c-16baa372ce99",
+              "parentUUID": "beddb0a2-2075-44ca-bc85-dbe3abff5846",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4. Validate ImdbPro is displayed",
+              "fullTitle": "TC9 - IMDB Header validation 4. Validate ImdbPro is displayed",
+              "timedOut": null,
+              "duration": 957,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getHeader().getImdbPro().should('be.visible');",
+              "err": {},
+              "uuid": "bde98c93-dfd1-44ad-be1c-b789698dfd01",
+              "parentUUID": "beddb0a2-2075-44ca-bc85-dbe3abff5846",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "5. Validate Watchlist button is displayed",
+              "fullTitle": "TC9 - IMDB Header validation 5. Validate Watchlist button is displayed",
+              "timedOut": null,
+              "duration": 916,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getHeader().getWatchListButton().should('be.visible');",
+              "err": {},
+              "uuid": "cb727f68-0ca8-4bb6-ab78-8a50c52c74ad",
+              "parentUUID": "beddb0a2-2075-44ca-bc85-dbe3abff5846",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "6. Validate SignIn button is displayed",
+              "fullTitle": "TC9 - IMDB Header validation 6. Validate SignIn button is displayed",
+              "timedOut": null,
+              "duration": 783,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getHeader().getLoginButton().should('be.visible');",
+              "err": {},
+              "uuid": "d31a2df8-10ee-4667-be65-186bb07eeb55",
+              "parentUUID": "beddb0a2-2075-44ca-bc85-dbe3abff5846",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "861c4164-4c1f-4983-9279-8368dd467625",
+            "5103b356-4c33-448e-bdda-8510cbb96ee6",
+            "6df5fe90-f87a-433f-8e5c-16baa372ce99",
+            "bde98c93-dfd1-44ad-be1c-b789698dfd01",
+            "cb727f68-0ca8-4bb6-ab78-8a50c52c74ad",
+            "d31a2df8-10ee-4667-be65-186bb07eeb55"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 732240,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

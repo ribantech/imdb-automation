@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-14T18:46:48.181Z",
+    "end": "2022-05-14T18:47:00.649Z",
+    "duration": 12468,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "88da95a8-f2ec-4707-bdd6-65f939ea04fa",
+      "title": "",
+      "fullFile": "cypress/integration/specs/TC1_HomePageSectionValidation.ts",
+      "file": "cypress/integration/specs/TC1_HomePageSectionValidation.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8b6b3495-688e-4ddd-8005-f9ccdb597d20",
+          "title": "TC1 - Navigate to IMDB and validate all the page components",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1. Navigate to IMDB home page",
+              "fullTitle": "TC1 - Navigate to IMDB and validate all the page components 1. Navigate to IMDB home page",
+              "timedOut": null,
+              "duration": 11421,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "appUrl = envUrl + testdata.url;\ncy.visit(appUrl);\nhomePage = new HomePage_1.default();\nhomePage.getPageTitle().getTitle().should('have.text', testdata.title);",
+              "err": {},
+              "uuid": "964b83cd-5a75-420f-a61a-687430674323",
+              "parentUUID": "8b6b3495-688e-4ddd-8005-f9ccdb597d20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Validate Header & Footer sections are displayed",
+              "fullTitle": "TC1 - Navigate to IMDB and validate all the page components 2. Validate Header & Footer sections are displayed",
+              "timedOut": null,
+              "duration": 159,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getHeader().getHeaderSection().should('be.visible');\nhomePage.getFooter().getFooterSection().should('be.visible');",
+              "err": {},
+              "uuid": "fb7d045f-bbdd-497f-9d3d-6bf70f1197ab",
+              "parentUUID": "8b6b3495-688e-4ddd-8005-f9ccdb597d20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3. Validate Movie table are displayed",
+              "fullTitle": "TC1 - Navigate to IMDB and validate all the page components 3. Validate Movie table are displayed",
+              "timedOut": null,
+              "duration": 88,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getMovies().getMovieTable().should('be.visible');\nhomePage.getFooter().getFooterSection().should('be.visible');",
+              "err": {},
+              "uuid": "2040f48d-50e9-4f07-808a-00b18de5460e",
+              "parentUUID": "8b6b3495-688e-4ddd-8005-f9ccdb597d20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4. Validate Sidebar - Already Seen & Genre section are displayed",
+              "fullTitle": "TC1 - Navigate to IMDB and validate all the page components 4. Validate Sidebar - Already Seen & Genre section are displayed",
+              "timedOut": null,
+              "duration": 90,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getRightSidebar().getAlreadySeenSection().should('be.visible');\nhomePage.getRightSidebar().getGenreSection().should('be.visible');",
+              "err": {},
+              "uuid": "06a8a4c9-a7d1-4038-abc2-b0212b339def",
+              "parentUUID": "8b6b3495-688e-4ddd-8005-f9ccdb597d20",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "964b83cd-5a75-420f-a61a-687430674323",
+            "fb7d045f-bbdd-497f-9d3d-6bf70f1197ab",
+            "2040f48d-50e9-4f07-808a-00b18de5460e",
+            "06a8a4c9-a7d1-4038-abc2-b0212b339def"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11758,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "url": "/chart/top?ref_=nv_mv_250_6",
+    "title": "IMDb Top 250 Movies",
+    "validquery": "The Godfather",
+    "invalidquery": "wegwrgrewrfewef",
+    "searchvalidtitle": "Results for ",
+    "searchinvalidtitle": "No results found for "
+}

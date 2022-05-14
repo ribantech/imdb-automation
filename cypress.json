@@ -1,0 +1,9 @@
+{
+    "reporter": "mochawesome",
+    "baseUrl": "https://www.imdb.com",
+    "reporterOptions": {
+        "overwrite": false,
+        "html": true,
+        "json": true
+    }
+}
